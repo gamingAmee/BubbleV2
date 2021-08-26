@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bubbles</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section>
+    <h2>Bubbles</h2>
+</section>
+<script type="text/javascript">
+    function createBubble(){
+        const section = document.querySelector('section')
+        const createElement = document.createElement('span')
+        var size = Math.random() * 60;
+
+        createElement.style.width = 2 + size + 'px';
+        createElement.style.height = 2 + size + 'px';
+        createElement.style.left = Math.random() * innerWidth + 'px';
+        section.appendChild(createElement);
+        setTimeout(() => {
+            createElement.remove()
+        },9000 )
+    }
+    setInterval(createBubble, 1)
+</script>
+</body>
+</html> 
